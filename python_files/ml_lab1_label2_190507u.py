@@ -320,7 +320,7 @@ print("Filtered test features: {}".format(test_features.shape))
 Used models for the evaluation
 """
 
-classification_models = [
+regression_models = [
     # ('Linear Regression', LinearRegression()),
     ('K Neighbors', KNeighborsRegressor()),
     # ('Decision Tree', DecisionTreeRegressor()),
@@ -334,7 +334,7 @@ num_features = train_features.shape[1]
 print(f"Number of features: {num_features}\n")
 
 # Train and evaluate each classification model
-for model_name, model in classification_models:
+for model_name, model in regression_models:
     # Train the model on the training data
     model.fit(train_features, train_label2)
 
